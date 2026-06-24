@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tucker Casuarina — Coffee, Brunch &amp; Lunch · Open 7 Days</title>
+<meta name="description" content="You're already here. Coffee, brunch and lunch at The Commons, Casuarina NSW. Open seven days. Order ahead, browse the menu, or just walk in.">
+<link rel="canonical" href="https://www.tuckercasuarina.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tucker Casuarina">
+<meta property="og:title" content="Tucker Casuarina — Coffee, Brunch &amp; Lunch · Open 7 Days">
+<meta property="og:description" content="You're already here. So — what are you ordering? Casuarina NSW, open seven days.">
+<meta property="og:url" content="https://www.tuckercasuarina.com/">
+<meta property="og:image" content="https://images.squarespace-cdn.com/content/v1/5a1df19229f187706a8cda42/ce9bc54a-8c83-4dce-8e4c-7162d251cd32/250105_tucker+17.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://images.squarespace-cdn.com/content/v1/5a1df19229f187706a8cda42/98f688c2-15f4-461e-ac8e-ea740c6b4b58/new+logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,600;6..12,700;6..12,800;6..12,900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green:  #7a9f7e;
+    --orange: #e6855a;
+    --purple: #bc9dbe;
+    --yellow: #e9e0a5;
+    --ink:    #1a1a1a;
+    --mid:    #4a443d;
+    --muted:  #7a7468;
+    --paper:  #fdfcf8;
+    --white:  #ffffff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Nunito Sans', sans-serif; font-weight: 300; background: var(--paper); color: var(--ink); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+
+  /* ── NAV ── */
+  .site-nav { position: sticky; top: 0; z-index: 200; background: var(--white); border-bottom: 1px solid rgba(0,0,0,0.08); }
+  .nav-strip { height: 4px; display: flex; }
+  .nav-strip span { flex: 1; }
+  .s-green { background: var(--green); } .s-orange { background: var(--orange); } .s-purple { background: var(--purple); } .s-yellow { background: var(--yellow); }
+  .nav-container { max-width: 1200px; margin: 0 auto; padding: 0.85rem 1.5rem; display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { text-decoration: none; font-weight: 900; font-size: 1.35rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--green); line-height: 1; display: flex; flex-direction: column; }
+  .nav-logo span { font-size: 8px; letter-spacing: 0.3em; color: rgba(0,0,0,0.45); font-weight: 700; margin-top: 3px; }
+  .nav-links { display: flex; align-items: center; gap: 1.5rem; }
+  .nav-links a { text-decoration: none; font-size: 11px; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ink); transition: color 0.15s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--green); }
+  .nav-links a.nav-order { background: var(--orange); color: var(--white); padding: 0.65rem 1.4rem; border-radius: 3px; }
+  .nav-links a.nav-order:hover { opacity: 0.88; color: var(--white); }
+  .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
+  .nav-toggle span { width: 24px; height: 2px; background: var(--ink); display: block; }
+  @media (max-width: 860px) {
+    .nav-toggle { display: flex; }
+    .nav-links { position: absolute; top: 100%; left: 0; right: 0; background: var(--white); flex-direction: column; align-items: stretch; gap: 0; padding: 0.5rem 0; border-bottom: 1px solid rgba(0,0,0,0.08); box-shadow: 0 12px 24px rgba(0,0,0,0.06); display: none; }
+    .site-nav.open .nav-links { display: flex; }
+    .nav-links a { padding: 0.9rem 1.5rem; border-top: 1px solid rgba(0,0,0,0.05); }
+    .nav-links a.nav-order { margin: 0.5rem 1.5rem; text-align: center; }
+  }
+
+  /* ── HERO (mobile-first: copy first, photo below) ── */
+  .hero { max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem 1.5rem; }
+  .hero-eye { font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--orange); font-weight: 800; margin-bottom: 1.1rem; }
+  .hero-title { font-size: clamp(3rem, 13vw, 6rem); font-weight: 900; letter-spacing: -0.01em; line-height: 0.92; color: var(--ink); margin-bottom: 1.1rem; }
+  .hero-sub { font-size: clamp(15px, 4.5vw, 19px); color: var(--mid); line-height: 1.55; max-width: 540px; font-weight: 400; margin-bottom: 1.75rem; }
+  .hero-sub b { font-weight: 800; color: var(--ink); }
+  .hero-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; max-width: 480px; }
+  .btn { display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 12px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; padding: 1.05rem 1rem; border-radius: 4px; transition: all 0.15s; text-align: center; }
+  .btn-fill { background: var(--orange); color: var(--white); grid-column: 1 / -1; font-size: 13px; }
+  .btn-fill:hover { background: #d4733f; }
+  .btn-out { background: var(--white); color: var(--ink); border: 1.5px solid rgba(0,0,0,0.15); }
+  .btn-out:hover { border-color: var(--green); color: var(--green); }
+  .hero-photo { width: 100%; max-width: 1100px; margin: 1.75rem auto 0; aspect-ratio: 16 / 10; border-radius: 10px; overflow: hidden; }
+  .hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  @media (min-width: 720px) {
+    .hero { padding: 4.5rem 1.5rem 2rem; }
+    .hero-btns { display: flex; flex-wrap: wrap; }
+    .btn { padding: 1rem 1.9rem; }
+    .btn-fill { grid-column: auto; }
+    .hero-photo { aspect-ratio: 21 / 9; }
+  }
+
+  /* ── HOURS + LOCATION (green band) ── */
+  .open-band { background: var(--green); color: var(--white); padding: 3rem 1.5rem; }
+  .open-inner { max-width: 1000px; margin: 0 auto; display: grid; gap: 2rem; }
+  .ob-h { font-size: clamp(1.6rem, 6vw, 2.4rem); font-weight: 900; text-transform: uppercase; letter-spacing: 0.02em; line-height: 1; margin-bottom: 0.4rem; }
+  .ob-yes { font-size: 13px; color: rgba(255,255,255,0.72); font-weight: 400; }
+  .ob-hours { display: flex; flex-direction: column; gap: 0.6rem; }
+  .ob-row { display: flex; justify-content: space-between; gap: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid rgba(255,255,255,0.18); font-size: 14px; }
+  .ob-row b { font-weight: 800; letter-spacing: 0.04em; }
+  .ob-row span { color: rgba(255,255,255,0.82); text-align: right; }
+  .ob-loc { font-size: 14px; line-height: 1.7; color: rgba(255,255,255,0.9); }
+  .ob-loc .park { color: var(--yellow); font-weight: 700; }
+  .ob-dir { display: inline-block; margin-top: 0.9rem; font-size: 11px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: var(--white); text-decoration: none; border-bottom: 2px solid rgba(233,224,165,0.6); padding-bottom: 3px; }
+  @media (min-width: 760px) { .open-inner { grid-template-columns: 1.1fr 1fr; gap: 4rem; align-items: center; } }
+
+  /* ── MENU HIGHLIGHTS ── */
+  .menu-hl { max-width: 900px; margin: 0 auto; padding: 4rem 1.5rem; }
+  .sec-eye { font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--muted); font-weight: 800; margin-bottom: 0.5rem; }
+  .sec-h { font-size: clamp(1.6rem, 6vw, 2.3rem); font-weight: 900; text-transform: uppercase; letter-spacing: 0.02em; color: var(--ink); margin-bottom: 2rem; }
+  .mh-item { padding: 1.1rem 0; border-bottom: 1px solid rgba(0,0,0,0.1); }
+  .mh-top { display: flex; align-items: baseline; gap: 0.75rem; }
+  .mh-name { font-size: clamp(1.05rem, 4.5vw, 1.3rem); font-weight: 800; text-transform: uppercase; letter-spacing: 0.02em; color: var(--ink); }
+  .mh-rule { flex: 1; border-bottom: 1px dotted rgba(0,0,0,0.25); transform: translateY(-3px); }
+  .mh-tag { font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); white-space: nowrap; }
+  .mh-desc { font-size: 13.5px; color: var(--muted); line-height: 1.55; margin-top: 0.3rem; font-weight: 300; }
+  .mh-btns { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 2rem; }
+  .btn-green { background: var(--green); color: var(--white); }
+  .btn-green:hover { background: #6a8e6e; }
+  .btn-ink { background: var(--white); color: var(--ink); border: 1.5px solid rgba(0,0,0,0.15); }
+  .btn-ink:hover { border-color: var(--orange); color: var(--orange); }
+
+  /* ── STORY ── */
+  .story { background: var(--white); border-top: 1px solid rgba(0,0,0,0.06); border-bottom: 1px solid rgba(0,0,0,0.06); }
+  .story-inner { max-width: 1000px; margin: 0 auto; display: grid; gap: 0; }
+  .story-img { min-height: 300px; background-size: cover; background-position: center; }
+  .story-text { padding: 3.5rem 1.5rem; display: flex; flex-direction: column; justify-content: center; }
+  .story-p { font-size: clamp(1.05rem, 4vw, 1.25rem); color: var(--mid); line-height: 1.7; font-weight: 400; margin-bottom: 1.5rem; }
+  .story-link { font-size: 11px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: var(--green); text-decoration: none; border-bottom: 2px solid rgba(122,159,126,0.4); padding-bottom: 3px; align-self: flex-start; }
+  @media (min-width: 760px) { .story-inner { grid-template-columns: 1fr 1fr; } .story-text { padding: 4rem 3.5rem; } }
+
+  /* ── COFFEE ── */
+  .coffee { background: var(--purple); color: var(--white); padding: 2.75rem 1.5rem; text-align: center; }
+  .coffee-line { font-size: clamp(1.3rem, 5vw, 1.9rem); font-weight: 900; text-transform: uppercase; letter-spacing: 0.04em; }
+  .coffee-line a { color: inherit; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 2px; }
+  .coffee-sub { font-size: 12px; color: rgba(255,255,255,0.75); margin-top: 0.5rem; letter-spacing: 0.04em; }
+
+  /* ── REVIEWS ── */
+  .reviews { background: var(--yellow); padding: 4rem 1.5rem; text-align: center; }
+  .reviews-inner { max-width: 1000px; margin: 0 auto; }
+  .rv-score { font-size: 3.2rem; font-weight: 900; color: var(--ink); line-height: 1; }
+  .rv-stars { color: var(--orange); font-size: 1.1rem; letter-spacing: 2px; margin: 0.4rem 0; }
+  .rv-lbl { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(0,0,0,0.55); font-weight: 700; margin-bottom: 2.25rem; }
+  .rv-grid { display: grid; gap: 1rem; text-align: left; }
+  .rv-card { background: var(--white); border-radius: 8px; padding: 1.4rem 1.5rem; border-top: 4px solid var(--green); }
+  .rv-card:nth-child(2) { border-top-color: var(--orange); }
+  .rv-card:nth-child(3) { border-top-color: var(--purple); }
+  .rv-q { font-size: 14px; color: var(--ink); line-height: 1.6; font-style: italic; margin-bottom: 0.75rem; }
+  .rv-src { font-size: 10px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+  @media (min-width: 760px) { .rv-grid { grid-template-columns: repeat(3, 1fr); } }
+
+  /* ── DUAL CTA (group + vouchers) ── */
+  .dual { display: grid; gap: 0; }
+  .dual-card { padding: 3.25rem 1.5rem; text-align: center; }
+  .dual-g { background: var(--orange); color: var(--white); }
+  .dual-v { background: var(--ink); color: var(--white); }
+  .dual-h { font-size: 1.5rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 0.5rem; }
+  .dual-p { font-size: 14px; line-height: 1.6; margin-bottom: 1.5rem; opacity: 0.85; max-width: 320px; margin-left: auto; margin-right: auto; }
+  .dual-btn { display: inline-block; text-decoration: none; font-size: 11px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; padding: 0.9rem 2.2rem; border-radius: 3px; }
+  .dual-g .dual-btn { background: var(--white); color: var(--orange); }
+  .dual-v .dual-btn { background: var(--yellow); color: var(--ink); }
+  @media (min-width: 700px) { .dual { grid-template-columns: 1fr 1fr; } }
+
+  /* ── FOOTER ── */
+  .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); }
+  .footer-strip { height: 6px; display: flex; }
+  .footer-strip span { flex: 1; }
+  .footer-inner { max-width: 1100px; margin: 0 auto; padding: 3.25rem 1.5rem 2.5rem; display: grid; grid-template-columns: 1fr; gap: 1.75rem; }
+  .footer-col h4 { font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(255,255,255,0.4); font-weight: 800; margin-bottom: 1rem; }
+  .footer-logo { font-size: 1.5rem; font-weight: 900; letter-spacing: 0.12em; text-transform: uppercase; color: var(--white); margin-bottom: 0.75rem; }
+  .footer-col p, .footer-col a { font-size: 13px; line-height: 1.9; color: rgba(255,255,255,0.7); text-decoration: none; font-weight: 300; }
+  .footer-col a { display: block; }
+  .footer-col a:hover { color: var(--yellow); }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding: 1.25rem 1.5rem; text-align: center; font-size: 11px; color: rgba(255,255,255,0.4); }
+  .footer-bottom span { color: var(--green); }
+  @media (min-width: 700px) { .footer-inner { grid-template-columns: 1.4fr 1fr 1fr; gap: 2.5rem; } }
+</style>
+</head>
+<body>
+<!-- NAV -->
+<header class="site-nav" id="siteNav">
+  <div class="nav-strip"><span class="s-green"></span><span class="s-orange"></span><span class="s-purple"></span><span class="s-yellow"></span></div>
+  <div class="nav-container">
+    <a href="index-v3.html" class="nav-logo">Tucker<span>Casuarina</span></a>
+    <button class="nav-toggle" aria-label="Toggle menu" onclick="document.getElementById('siteNav').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links">
+      <a href="index-v3.html" class="active">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="gift-vouchers.html">Gift Vouchers</a>
+      <a href="bookings.html">Group Bookings</a>
+      <a href="https://www.meandu.app/tucker/pickup" class="nav-order">Order Pickup</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eye">Casuarina, NSW · Open 7 Days</div>
+  <h1 class="hero-title">You're<br>already here.</h1>
+  <p class="hero-sub">Coffee, brunch and lunch at <b>The Commons</b>, Casuarina. Seven days a week. So — what are you ordering?</p>
+  <div class="hero-btns">
+    <a href="https://www.meandu.app/tucker/pickup" class="btn btn-fill">Order Pickup →</a>
+    <a href="menu.html" class="btn btn-out">See the Menu</a>
+    <a href="#hours" class="btn btn-out">Today's Hours</a>
+    <a href="#hours" class="btn btn-out">Find Us</a>
+  </div>
+  <div class="hero-photo">
+    <img src="https://images.squarespace-cdn.com/content/v1/5a1df19229f187706a8cda42/ce9bc54a-8c83-4dce-8e4c-7162d251cd32/250105_tucker+17.jpg" alt="A table at Tucker loaded with burgers, fries, eggs and drinks">
+  </div>
+</section>
+
+<!-- HOURS + LOCATION -->
+<section class="open-band" id="hours">
+  <div class="open-inner">
+    <div>
+      <div class="ob-h">Open. Come in.</div>
+      <div class="ob-yes">Yes, we're open. We're open seven days.</div>
+    </div>
+    <div>
+      <div class="ob-hours">
+        <div class="ob-row"><b>Mon – Fri</b><span>Coffee from 6am · Kitchen 7am–1:30pm</span></div>
+        <div class="ob-row"><b>Sat – Sun</b><span>Coffee from 7am · Kitchen 7am–1:30pm</span></div>
+      </div>
+      <div class="ob-loc" style="margin-top:1.25rem;">The Commons, T1/480 Casuarina Way,<br>Casuarina NSW 2487. <span class="park">Park's easy.</span></div>
+      <a class="ob-dir" href="https://maps.google.com/?q=Tucker+Casuarina+T1/480+Casuarina+Way+NSW+2487" target="_blank" rel="noopener">Get Directions →</a>
+    </div>
+  </div>
+</section>
+
+<!-- MENU HIGHLIGHTS -->
+<section class="menu-hl">
+  <div class="sec-eye">What everyone's getting</div>
+  <div class="sec-h">The usual suspects</div>
+  <div class="mh-item">
+    <div class="mh-top"><span class="mh-name">Green Eggs</span><span class="mh-rule"></span><span class="mh-tag">20.5</span></div>
+    <div class="mh-desc">Seasonal greens, hummus, poached eggs, salsa verde. The one on everyone's feed.</div>
+  </div>
+  <div class="mh-item">
+    <div class="mh-top"><span class="mh-name">Big Tucker</span><span class="mh-rule"></span><span class="mh-tag">36</span></div>
+    <div class="mh-desc">Bacon, avo, herb rosti, lamb sausage, mushrooms, eggs. For when you skipped dinner.</div>
+  </div>
+  <div class="mh-item">
+    <div class="mh-top"><span class="mh-name">Rosti Benedict</span><span class="mh-rule"></span><span class="mh-tag">26.5</span></div>
+    <div class="mh-desc">Two herbed rostis, poached eggs, hollandaise, your pick on top. Do not share.</div>
+  </div>
+  <div class="mh-item">
+    <div class="mh-top"><span class="mh-name">Shroom Scramble</span><span class="mh-rule"></span><span class="mh-tag">25</span></div>
+    <div class="mh-desc">Scramble, pan-fried mushies, persian feta, salsa verde on sourdough.</div>
+  </div>
+  <div class="mh-item">
+    <div class="mh-top"><span class="mh-name">The Burgster</span><span class="mh-rule"></span><span class="mh-tag">19.5</span></div>
+    <div class="mh-desc">Wagyu patty, swiss, le mac sauce, milk bun. Add chips, obviously.</div>
+  </div>
+  <div class="mh-btns">
+    <a href="menu.html" class="btn btn-green">Full Menu →</a>
+    <a href="https://www.meandu.app/tucker/pickup" class="btn btn-ink">Order ahead on me&amp;u</a>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story">
+  <div class="story-inner">
+    <div class="story-img" style="background-image:url('https://images.squarespace-cdn.com/content/v1/5a1df19229f187706a8cda42/2310b276-7e2f-4f0b-b726-59519ba615ae/dale+and+phil-1.jpg');"></div>
+    <div class="story-text">
+      <div class="sec-eye">Who's Tucker</div>
+      <p class="story-p">Started by three mates in 2018, still run by Phil and Dale. Good coffee, big plates, dogs welcome. We'll keep this short — your coffee's getting cold.</p>
+      <a href="about.html" class="story-link">More about us →</a>
+    </div>
+  </div>
+</section>
+
+<!-- COFFEE -->
+<section class="coffee">
+  <div class="coffee-line">Coffee's <a href="https://lomacoffee.co/" target="_blank" rel="noopener">Loma</a>. Has been from the start.</div>
+  <div class="coffee-sub">From 6am weekdays · 7am weekends</div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews">
+  <div class="reviews-inner">
+    <div class="rv-score">4.5</div>
+    <div class="rv-stars">★★★★★</div>
+    <div class="rv-lbl">From 391 reviews · the green eggs do most of the talking</div>
+    <div class="rv-grid">
+      <div class="rv-card">
+        <div class="rv-q">"Seriously the best service and food we've had on the Tweed."</div>
+        <div class="rv-src">TripAdvisor</div>
+      </div>
+      <div class="rv-card">
+        <div class="rv-q">"The shroom scramble and rosti were amazing. On a Saturday the place was buzzing."</div>
+        <div class="rv-src">TripAdvisor</div>
+      </div>
+      <div class="rv-card">
+        <div class="rv-q">"What a find. The green eggs are to die for."</div>
+        <div class="rv-src">Google</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DUAL CTA -->
+<section class="dual">
+  <div class="dual-card dual-g">
+    <div class="dual-h">Bringing a crowd?</div>
+    <p class="dual-p">Eight or more, we've got you. Tell us when and we'll sort the rest.</p>
+    <a href="bookings.html" class="dual-btn">Book a Group</a>
+  </div>
+  <div class="dual-card dual-v">
+    <div class="dual-h">Hard to buy for?</div>
+    <p class="dual-p">A Tucker voucher never misses. Delivered straight to their inbox.</p>
+    <a href="gift-vouchers.html" class="dual-btn">Grab a Voucher</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-strip"><span class="s-green"></span><span class="s-orange"></span><span class="s-purple"></span><span class="s-yellow"></span></div>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <div class="footer-logo">Tucker</div>
+      <p>The Commons, T1/480 Casuarina Way,<br>Casuarina NSW 2487</p>
+      <p style="margin-top:0.75rem;"><a href="mailto:gday@tuckercasuarina.com" style="display:inline;color:var(--yellow);">gday@tuckercasuarina.com</a></p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="https://www.meandu.app/tucker/pickup">Order Pickup</a>
+      <a href="gift-vouchers.html">Gift Vouchers</a>
+      <a href="bookings.html">Group Bookings</a>
+    </div>
+    <div class="footer-col">
+      <h4>Open 7 Days</h4>
+      <p>Coffee from 6 · Kitchen from 7<br>Proudly pouring Loma</p>
+      <a href="https://www.instagram.com/tucker.casuarina/" target="_blank" rel="noopener" style="margin-top:0.75rem;color:var(--yellow);">@tucker.casuarina →</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 <span>Tucker Casuarina</span>. All rights reserved.</div>
+</footer>
+</body>
+</html>
