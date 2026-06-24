@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Tucker Casuarina</title>
+<meta name="description" content="More than a café. Born in Casuarina in 2018 by three mates with a love for Australian coffee culture. Meet the team behind Tucker and the community we serve.">
+<link rel="canonical" href="https://www.tuckercasuarina.com/about">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tucker Casuarina">
+<meta property="og:title" content="About — Tucker Casuarina">
+<meta property="og:description" content="Born in Casuarina in 2018. Quality coffee, honest food and a community that feels like family.">
+<meta property="og:url" content="https://www.tuckercasuarina.com/about">
+<meta property="og:image" content="https://images.squarespace-cdn.com/content/v1/5a1df19229f187706a8cda42/2310b276-7e2f-4f0b-b726-59519ba615ae/dale+and+phil-1.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://images.squarespace-cdn.com/content/v1/5a1df19229f187706a8cda42/98f688c2-15f4-461e-ac8e-ea740c6b4b58/new+logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sage:       #7a9f7e;
+    --sage-mid:   #5d8561;
+    --sage-pale:  #edf4ee;
+    --sage-dark:  #3a5c3d;
+    --terra:      #e6855a;
+    --terra-pale: #fdf0ea;
+    --lilac:      #bc9dbe;
+    --butter:     #e9e0a5;
+    --butter-pale:#faf8ec;
+    --ink:        #1a1a1a;
+    --mid:        #4a443d;
+    --muted:      #7a7468;
+    --light:      #bbb;
+    --rule:       #e8e4de;
+    --bg:         #fdfcf8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--ink); font-family: 'Nunito Sans', sans-serif; font-weight: 300; overflow-x: hidden; }
+  /* ── SHARED SITE NAV ── */
+  .site-nav { position: sticky; top: 0; z-index: 200; background: #fff; border-bottom: 1px solid rgba(0,0,0,0.08); }
+  .nav-strip { height: 4px; display: flex; }
+  .nav-strip span { flex: 1; }
+  .s-green { background: #7a9f7e; } .s-orange { background: #e6855a; } .s-purple { background: #bc9dbe; } .s-yellow { background: #e9e0a5; }
+  .nav-container { max-width: 1200px; margin: 0 auto; padding: 0.85rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { text-decoration: none; font-weight: 900; font-size: 1.35rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sage); line-height: 1; display: flex; flex-direction: column; }
+  .nav-logo span { font-size: 8px; letter-spacing: 0.3em; color: rgba(0,0,0,0.45); font-weight: 700; margin-top: 3px; }
+  .nav-links { display: flex; align-items: center; gap: 1.6rem; }
+  .nav-links a { text-decoration: none; font-size: 11px; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ink); transition: color 0.15s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--sage); }
+  .nav-links a.nav-order { background: var(--terra); color: #fff; padding: 0.65rem 1.4rem; border-radius: 3px; }
+  .nav-links a.nav-order:hover { opacity: 0.88; color: #fff; }
+  .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
+  .nav-toggle span { width: 24px; height: 2px; background: var(--ink); display: block; }
+  @media (max-width: 860px) {
+    .nav-toggle { display: flex; }
+    .nav-links { position: absolute; top: 100%; left: 0; right: 0; background: #fff; flex-direction: column; align-items: stretch; gap: 0; padding: 0.5rem 0; border-bottom: 1px solid rgba(0,0,0,0.08); box-shadow: 0 12px 24px rgba(0,0,0,0.06); display: none; }
+    .site-nav.open .nav-links { display: flex; }
+    .nav-links a { padding: 0.9rem 2rem; border-top: 1px solid rgba(0,0,0,0.05); }
+    .nav-links a.nav-order { margin: 0.5rem 2rem; text-align: center; }
+  }
+  /* ── HERO ── */
+  .hero { background: var(--sage); padding: 4.5rem 2rem 4rem; text-align: center; position: relative; overflow: hidden; }
+  .hero::before {
+    content: ''; position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 18% 50%, rgba(233,224,165,0.18) 0%, transparent 55%),
+      radial-gradient(ellipse at 85% 25%, rgba(188,157,190,0.16) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .hero-eye { font-size: 10px; letter-spacing: 0.35em; text-transform: uppercase; color: rgba(255,255,255,0.6); font-weight: 700; margin-bottom: 1rem; position: relative; }
+  .hero-title { font-size: clamp(2.4rem, 6.5vw, 4rem); font-weight: 900; letter-spacing: 0.03em; text-transform: uppercase; color: #fff; line-height: 1.02; position: relative; }
+  .hero-title span { color: var(--butter); display: block; }
+  .hero-desc { font-size: 15px; color: rgba(255,255,255,0.78); line-height: 1.8; max-width: 480px; margin: 1.25rem auto 0; font-weight: 300; position: relative; }
+  /* ── STORY (image + text) ── */
+  .split { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; }
+  .split-img { background-size: cover; background-position: center; min-height: 460px; }
+  .split-text { padding: 4rem 3.5rem; display: flex; flex-direction: column; justify-content: center; }
+  .eye { font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.75rem; }
+  .split-h { font-size: clamp(1.7rem, 3vw, 2.4rem); font-weight: 900; letter-spacing: 0.02em; text-transform: uppercase; line-height: 1.08; margin-bottom: 1.25rem; }
+  .split-p { font-size: 14.5px; line-height: 1.9; margin-bottom: 1rem; font-weight: 300; }
+  .split-p:last-child { margin-bottom: 0; }
+  /* story = white text panel */
+  .story .split-text { background: #fff; }
+  .story .eye { color: var(--terra); }
+  .story .split-h { color: var(--sage); }
+  .story .split-h span { color: var(--terra); }
+  .story .split-p { color: var(--mid); }
+  /* ── VALUES ── */
+  .values { background: var(--butter-pale); padding: 4.5rem 2rem; text-align: center; }
+  .values-inner { max-width: 1000px; margin: 0 auto; }
+  .values .eye { color: var(--muted); }
+  .values-h { font-size: clamp(1.5rem, 3vw, 2.1rem); font-weight: 900; letter-spacing: 0.04em; text-transform: uppercase; color: var(--sage); margin-bottom: 2.5rem; }
+  .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+  .value-card { background: #fff; border-radius: 12px; padding: 2.25rem 1.75rem; text-align: left; border-top: 5px solid var(--sage); }
+  .value-card:nth-child(2) { border-top-color: var(--terra); }
+  .value-card:nth-child(3) { border-top-color: var(--lilac); }
+  .value-icon { margin-bottom: 1rem; }
+  .value-icon svg { width: 30px; height: 30px; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .value-card:nth-child(1) .value-icon svg { stroke: var(--sage); }
+  .value-card:nth-child(2) .value-icon svg { stroke: var(--terra); }
+  .value-card:nth-child(3) .value-icon svg { stroke: var(--lilac); }
+  .value-title { font-size: 12px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); margin-bottom: 0.6rem; }
+  .value-desc { font-size: 13.5px; color: var(--muted); line-height: 1.7; font-weight: 300; }
+  /* ── TEAM (orange text panel) ── */
+  .team .split-img { min-height: 480px; }
+  .team .split-text { background: var(--terra); order: 2; }
+  .team .split-img { order: 1; }
+  .team .eye { color: rgba(255,255,255,0.65); }
+  .team .split-h { color: #fff; }
+  .team .split-h span { color: var(--butter); }
+  .team .split-p { color: rgba(255,255,255,0.85); }
+  /* ── COMMUNITY (green band) ── */
+  .community { background: var(--sage); padding: 4.5rem 2rem; text-align: center; position: relative; overflow: hidden; }
+  .community::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 0%, rgba(233,224,165,0.12) 0%, transparent 60%); pointer-events: none; }
+  .community-inner { max-width: 760px; margin: 0 auto; position: relative; }
+  .community .eye { color: rgba(255,255,255,0.55); }
+  .community-h { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 900; letter-spacing: 0.04em; text-transform: uppercase; color: #fff; margin-bottom: 1.25rem; line-height: 1.1; }
+  .community-h span { color: var(--butter); }
+  .community-p { font-size: 15px; color: rgba(255,255,255,0.85); line-height: 1.9; font-weight: 300; }
+  .community-stats { display: flex; justify-content: center; gap: 2.5rem; margin-top: 2.5rem; flex-wrap: wrap; }
+  .stat-num { font-size: 2.4rem; font-weight: 900; color: var(--butter); line-height: 1; }
+  .stat-lbl { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.7); font-weight: 700; margin-top: 0.4rem; }
+  /* ── ETHOS BAND (purple) ── */
+  .ethos { background: var(--lilac); padding: 3.5rem 2rem; text-align: center; }
+  .ethos-eye { font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(255,255,255,0.7); font-weight: 700; margin-bottom: 0.75rem; }
+  .ethos-words { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; align-items: center; }
+  .ethos-word { font-size: clamp(1.4rem, 3.5vw, 2.2rem); font-weight: 900; letter-spacing: 0.06em; text-transform: uppercase; color: #fff; }
+  .ethos-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--butter); }
+  /* ── CTA ── */
+  .cta { background: #fff; padding: 4.5rem 2rem; text-align: center; }
+  .cta-h { font-size: clamp(1.5rem, 3vw, 2.1rem); font-weight: 900; letter-spacing: 0.03em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.75rem; }
+  .cta-p { font-size: 14px; color: var(--muted); line-height: 1.8; max-width: 440px; margin: 0 auto 2rem; }
+  .cta-btns { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+  .btn-terra, .btn-ghost { display: inline-block; text-decoration: none; font-size: 11px; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; padding: 1rem 2.5rem; border-radius: 3px; transition: all 0.18s; }
+  .btn-terra { background: var(--terra); color: #fff; }
+  .btn-terra:hover { background: #d4733f; }
+  .btn-ghost { background: transparent; color: var(--sage); border: 1.5px solid var(--sage); }
+  .btn-ghost:hover { background: var(--sage-pale); }
+  /* ── SHARED FOOTER ── */
+  .site-footer { background: #1a1a1a; color: rgba(255,255,255,0.7); }
+  .footer-strip { height: 6px; display: flex; }
+  .footer-strip span { flex: 1; }
+  .footer-inner { max-width: 1100px; margin: 0 auto; padding: 3.5rem 2rem 2.5rem; display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 2.5rem; }
+  .footer-col h4 { font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(255,255,255,0.4); font-weight: 800; margin-bottom: 1rem; }
+  .footer-logo { font-size: 1.5rem; font-weight: 900; letter-spacing: 0.12em; text-transform: uppercase; color: #fff; margin-bottom: 0.75rem; }
+  .footer-col p, .footer-col a { font-size: 13px; line-height: 1.9; color: rgba(255,255,255,0.7); text-decoration: none; font-weight: 300; }
+  .footer-col a { display: block; }
+  .footer-col a:hover { color: var(--butter); }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding: 1.25rem 2rem; text-align: center; font-size: 11px; color: rgba(255,255,255,0.4); }
+  .footer-bottom span { color: var(--sage); }
+  /* ── RESPONSIVE ── */
+  @media (max-width: 860px) {
+    .split { grid-template-columns: 1fr; }
+    .split-img { min-height: 320px; }
+    .team .split-text { order: 1; }
+    .team .split-img { order: 2; }
+    .values-grid { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 600px) {
+    .split-text { padding: 3rem 1.5rem; }
+    .hero { padding: 3.5rem 1.5rem 3rem; }
+    .footer-inner { grid-template-columns: 1fr; gap: 1.75rem; }
+  }
+</style>
+</head>
+<body>
+<!-- ════ SHARED NAV ════ -->
+<header class="site-nav" id="siteNav">
+  <div class="nav-strip"><span class="s-green"></span><span class="s-orange"></span><span class="s-purple"></span><span class="s-yellow"></span></div>
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">Tucker<span>Casuarina</span></a>
+    <button class="nav-toggle" aria-label="Toggle menu" onclick="document.getElementById('siteNav').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html" class="active">About</a>
+      <a href="gift-vouchers.html">Gift Vouchers</a>
+      <a href="bookings.html">Group Bookings</a>
+      <a href="https://www.meandu.app/tucker/pickup" class="nav-order">Order Pickup</a>
+    </nav>
+  </div>
+</header>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eye">Our Story · Casuarina, NSW · Est. 2018</div>
+  <h1 class="hero-title">More than a café.<span>A community hub.</span></h1>
+  <p class="hero-desc">Great coffee, honest food, and a place that feels like home — built in the heart of Casuarina, a stone's throw from the beach.</p>
+</section>
+<!-- STORY -->
+<section class="split story">
+  <div class="split-img" style="background-image:url('https://images.squarespace-cdn.com/content/v1/5a1df19229f187706a8cda42/2cf8816c-09ae-4b1f-9ee1-ebdda60286a0/commons-cafe-sign.jpg');"></div>
+  <div class="split-text">
+    <div class="eye">How it started</div>
+    <h2 class="split-h">Three mates,<span>one good idea.</span></h2>
+    <p class="split-p">Back in 2018, three mates with different skills but one shared obsession — Australian coffee culture — set out to build something Casuarina didn't have yet. Tucker was born: a café built on passion and a simple dream to celebrate everything we love about Aussie hospitality.</p>
+    <p class="split-p">Nearly seven years on, we've served a lot of coffee, plated a lot of good food, and become the community hub we always hoped we'd be. The rest, as they say, is history.</p>
+  </div>
+</section>
+<!-- VALUES -->
+<section class="values">
+  <div class="values-inner">
+    <div class="eye">What drives us</div>
+    <h2 class="values-h">The things we won't compromise on</h2>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6L5.7 21l2.3-7.2-6-4.4h7.6z"/></svg></div>
+        <div class="value-title">High Value</div>
+        <div class="value-desc">From the plate to the service, we sweat the details so every visit's worth it. Nothing leaves the pass we wouldn't happily eat ourselves.</div>
+      </div>
+      <div class="value-card">
+        <div class="value-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4.5 8-11.5A6.5 6.5 0 0012 4a6.5 6.5 0 00-8 6.5C4 17.5 12 22 12 22z"/><path d="M12 8c-1.5 2-3 3-3 5"/></svg></div>
+        <div class="value-title">Local &amp; Sustainable</div>
+        <div class="value-desc">Locally sourced where we can, made in-house wherever possible. Australian classics with a modern twist — and long-standing relationships with the suppliers we trust.</div>
+      </div>
+      <div class="value-card">
+        <div class="value-icon"><svg viewBox="0 0 24 24"><path d="M3 21v-2a4 4 0 014-4h10a4 4 0 014 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <div class="value-title">Casual Comfort</div>
+        <div class="value-desc">A laid-back room where everyone's welcome — dogs included. Pull up a chair, settle in, and let us take care of the rest.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- TEAM -->
+<section class="split team">
+  <div class="split-img" style="background-image:url('https://images.squarespace-cdn.com/content/v1/5a1df19229f187706a8cda42/2310b276-7e2f-4f0b-b726-59519ba615ae/dale+and+phil-1.jpg');"></div>
+  <div class="split-text">
+    <div class="eye">Meet the team</div>
+    <h2 class="split-h">Phil &amp; Dale<span>the heart of Tucker.</span></h2>
+    <p class="split-p">At the heart of Tucker are Phil and Dale — a team who bring warmth, energy and genuine passion to everything they do.</p>
+    <p class="split-p">Together they've built a place driven by a love for great food, great coffee, and the kind of connections that turn first-timers into regulars and regulars into family.</p>
+  </div>
+</section>
+<!-- COMMUNITY -->
+<section class="community">
+  <div class="community-inner">
+    <div class="eye">A community hub</div>
+    <h2 class="community-h">We're proud to be <span>more than a café.</span></h2>
+    <p class="community-p">Tucker is a place where people gather, friendships form and stories are shared. Whether we're backing local junior sports teams, hosting fundraisers, or giving local teens their first job, we're here to support the community that's supported us — every step of the way.</p>
+    <div class="community-stats">
+      <div><div class="stat-num">2018</div><div class="stat-lbl">Serving since</div></div>
+      <div><div class="stat-num">7 days</div><div class="stat-lbl">Open every week</div></div>
+      <div><div class="stat-num">Local</div><div class="stat-lbl">First jobs &amp; teams</div></div>
+    </div>
+  </div>
+</section>
+<!-- ETHOS BAND -->
+<section class="ethos">
+  <div class="ethos-eye">What makes us, us</div>
+  <div class="ethos-words">
+    <span class="ethos-word">Quality</span>
+    <span class="ethos-dot"></span>
+    <span class="ethos-word">Experience</span>
+    <span class="ethos-dot"></span>
+    <span class="ethos-word">Consistency</span>
+  </div>
+</section>
+<!-- CTA -->
+<section class="cta">
+  <h2 class="cta-h">Come say g'day</h2>
+  <p class="cta-p">Whether you're dropping by for a coffee, a meal, or just a chat — we're here to make you feel right at home. See you soon at Tucker.</p>
+  <div class="cta-btns">
+    <a href="menu.html" class="btn-terra">View the Menu →</a>
+    <a href="index.html#about" class="btn-ghost">Find Us</a>
+  </div>
+</section>
+<!-- ════ SHARED FOOTER ════ -->
+<footer class="site-footer">
+  <div class="footer-strip"><span class="s-green"></span><span class="s-orange"></span><span class="s-purple"></span><span class="s-yellow"></span></div>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <div class="footer-logo">Tucker</div>
+      <p>Coffee, brunch &amp; good vibes at The Commons.<br>T1/480 Casuarina Way,<br>Casuarina NSW 2487</p>
+      <p style="margin-top:0.75rem;"><a href="mailto:gday@tuckercasuarina.com" style="display:inline;color:var(--butter);">gday@tuckercasuarina.com</a></p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="gift-vouchers.html">Gift Vouchers</a>
+      <a href="bookings.html">Group Bookings</a>
+    </div>
+    <div class="footer-col">
+      <h4>Hours</h4>
+      <p>Mon–Fri · Coffee 6am–2pm<br>Food 7am–1:30pm</p>
+      <p>Sat–Sun · Coffee 7am–2pm<br>Food 7am–1:30pm</p>
+      <a href="https://www.instagram.com/tucker.casuarina/" target="_blank" rel="noopener" style="margin-top:0.75rem;color:var(--butter);">@tucker.casuarina →</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 <span>Tucker Casuarina</span>. All rights reserved. · Proudly serving Loma Coffee</div>
+</footer>
+</body>
+</html>
