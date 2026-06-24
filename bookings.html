@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Group Bookings — Tucker Casuarina</title>
+<meta name="description" content="Planning something special? Book a group of 8+ at Tucker Casuarina. Fill in the form and we'll confirm within 48 hours.">
+<link rel="canonical" href="https://www.tuckercasuarina.com/bookings">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tucker Casuarina">
+<meta property="og:title" content="Group Bookings — Tucker Casuarina">
+<meta property="og:description" content="Book a group of 8+ at Tucker Casuarina. We'll confirm within 48 hours.">
+<meta property="og:url" content="https://www.tuckercasuarina.com/bookings">
+<meta property="og:image" content="https://images.squarespace-cdn.com/content/5a1df19229f187706a8cda42/3c2e7c37-98ba-4de8-b258-d17fee216d4a/tucker-inside.png?content-type=image%2Fpng">
+<link rel="icon" href="https://images.squarespace-cdn.com/content/v1/5a1df19229f187706a8cda42/98f688c2-15f4-461e-ac8e-ea740c6b4b58/new+logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sage:      #7a9f7e;
+    --sage-pale: #edf4ee;
+    --terra:     #e6855a;
+    --terra-pale:#fdf0ea;
+    --lilac:     #bc9dbe;
+    --lilac-pale:#f3ecf3;
+    --butter:    #e9e0a5;
+    --ink:       #1a1a1a;
+    --mid:       #4a443d;
+    --muted:     #7a7468;
+    --light:     #bbb;
+    --rule:      #e8e4de;
+    --bg:        #ffffff;
+    --field-bg:  #faf9f7;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 300;
+  }
+  /* ── SHARED SITE NAV ── */
+  .site-nav { position: sticky; top: 0; z-index: 200; background: #fff; border-bottom: 1px solid rgba(0,0,0,0.08); }
+  .nav-strip { height: 4px; display: flex; }
+  .nav-strip span { flex: 1; }
+  .s-green { background: #7a9f7e; } .s-orange { background: #e6855a; } .s-purple { background: #bc9dbe; } .s-yellow { background: #e9e0a5; }
+  .nav-container { max-width: 1200px; margin: 0 auto; padding: 0.85rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { text-decoration: none; font-weight: 900; font-size: 1.35rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sage); line-height: 1; display: flex; flex-direction: column; }
+  .nav-logo span { font-size: 8px; letter-spacing: 0.3em; color: rgba(0,0,0,0.45); font-weight: 700; margin-top: 3px; }
+  .nav-links { display: flex; align-items: center; gap: 1.75rem; }
+  .nav-links a { text-decoration: none; font-size: 11px; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ink); transition: color 0.15s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--sage); }
+  .nav-links a.nav-order { background: var(--terra); color: #fff; padding: 0.65rem 1.4rem; border-radius: 3px; }
+  .nav-links a.nav-order:hover { opacity: 0.88; color: #fff; }
+  .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
+  .nav-toggle span { width: 24px; height: 2px; background: var(--ink); display: block; }
+  @media (max-width: 820px) {
+    .nav-toggle { display: flex; }
+    .nav-links { position: absolute; top: 100%; left: 0; right: 0; background: #fff; flex-direction: column; align-items: stretch; gap: 0; padding: 0.5rem 0; border-bottom: 1px solid rgba(0,0,0,0.08); box-shadow: 0 12px 24px rgba(0,0,0,0.06); display: none; }
+    .site-nav.open .nav-links { display: flex; }
+    .nav-links a { padding: 0.9rem 2rem; border-top: 1px solid rgba(0,0,0,0.05); }
+    .nav-links a.nav-order { margin: 0.5rem 2rem; text-align: center; }
+  }
+  /* ── WRAPPER ── */
+  .booking-wrap { max-width: 680px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+  .page-header { text-align: center; margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--rule); }
+  .page-title {
+    font-size: 1.9rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 0.6rem;
+  }
+  .page-desc { font-size: 13px; color: var(--muted); line-height: 1.7; max-width: 420px; margin: 0 auto; }
+  .info-strip {
+    display: flex;
+    gap: 1px;
+    margin-bottom: 2.5rem;
+    background: var(--rule);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .info-block { flex: 1; background: var(--field-bg); padding: 1rem 1.25rem; text-align: center; }
+  .info-label { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); font-weight: 700; margin-bottom: 3px; }
+  .info-value { font-size: 12.5px; font-weight: 600; color: var(--mid); }
+  .form-section { margin-bottom: 2rem; }
+  .form-section-title {
+    font-size: 9px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: var(--sage);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1.5px solid var(--sage-pale);
+  }
+  .form-row { display: flex; gap: 1rem; margin-bottom: 1rem; }
+  .form-group { flex: 1; min-width: 0; margin-bottom: 1rem; }
+  .form-group.half { flex: 0 0 calc(50% - 0.5rem); }
+  label {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--mid);
+    margin-bottom: 0.4rem;
+  }
+  label .req { color: var(--terra); margin-left: 2px; }
+  input, select, textarea {
+    width: 100%;
+    background: var(--field-bg);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 0.7rem 0.9rem;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--ink);
+    transition: border-color 0.18s, box-shadow 0.18s;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+  input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--sage);
+    box-shadow: 0 0 0 3px rgba(122,159,126,0.12);
+    background: white;
+  }
+  input::placeholder, textarea::placeholder { color: var(--light); font-weight: 300; }
+  select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237a7468' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.9rem center;
+    padding-right: 2.5rem;
+    cursor: pointer;
+  }
+  textarea { resize: vertical; min-height: 100px; line-height: 1.6; }
+  .check-grid { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .check-pill {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    border: 1px solid var(--rule);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.15s;
+    font-size: 11.5px;
+    font-weight: 600;
+    color: var(--mid);
+    user-select: none;
+  }
+  .check-pill input[type="checkbox"] { width: 14px; height: 14px; margin: 0; padding: 0; accent-color: var(--sage); cursor: pointer; }
+  .check-pill:has(input:checked) { border-color: var(--sage); background: var(--sage-pale); color: var(--sage); }
+  .submit-wrap { margin-top: 2rem; text-align: center; }
+  .submit-btn {
+    display: inline-block;
+    background: var(--sage);
+    color: white;
+    border: none;
+    padding: 0.95rem 3rem;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background 0.18s, transform 0.1s;
+    width: 100%;
+    max-width: 320px;
+  }
+  .submit-btn:hover { background: #6a8e6e; }
+  .submit-btn:active { transform: scale(0.98); }
+  .submit-btn:disabled { background: var(--rule); color: var(--muted); cursor: not-allowed; }
+  .submit-note { font-size: 11px; color: var(--muted); margin-top: 0.75rem; line-height: 1.6; }
+  .success-screen { display: none; text-align: center; padding: 3rem 2rem; animation: fadeIn 0.4s ease; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+  .success-icon {
+    width: 56px;
+    height: 56px;
+    background: var(--sage-pale);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.25rem;
+  }
+  .success-icon svg { width: 26px; height: 26px; }
+  .success-title {
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 0.6rem;
+  }
+  .success-msg { font-size: 13.5px; color: var(--muted); line-height: 1.8; max-width: 380px; margin: 0 auto 1.5rem; }
+  .success-detail {
+    background: var(--field-bg);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 1.25rem 1.5rem;
+    text-align: left;
+    max-width: 380px;
+    margin: 0 auto;
+    font-size: 12.5px;
+    line-height: 2;
+    color: var(--mid);
+  }
+  .success-detail strong { font-weight: 700; color: var(--ink); }
+  .field-error { font-size: 10.5px; color: var(--terra); margin-top: 4px; display: none; }
+  .field-error.show { display: block; }
+  input.error, select.error, textarea.error { border-color: var(--terra); }
+  /* ── SHARED FOOTER ── */
+  .site-footer { background: #1a1a1a; color: rgba(255,255,255,0.7); }
+  .footer-strip { height: 6px; display: flex; }
+  .footer-strip span { flex: 1; }
+  .footer-inner { max-width: 1100px; margin: 0 auto; padding: 3.5rem 2rem 2.5rem; display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 2.5rem; }
+  .footer-col h4 { font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(255,255,255,0.4); font-weight: 800; margin-bottom: 1rem; }
+  .footer-logo { font-size: 1.5rem; font-weight: 900; letter-spacing: 0.12em; text-transform: uppercase; color: #fff; margin-bottom: 0.75rem; }
+  .footer-col p, .footer-col a { font-size: 13px; line-height: 1.9; color: rgba(255,255,255,0.7); text-decoration: none; font-weight: 300; }
+  .footer-col a { display: block; }
+  .footer-col a:hover { color: var(--butter); }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding: 1.25rem 2rem; text-align: center; font-size: 11px; color: rgba(255,255,255,0.4); }
+  .footer-bottom span { color: var(--sage); }
+  @media (max-width: 540px) {
+    .booking-wrap { padding: 2rem 1.25rem 4rem; }
+    .form-row { flex-direction: column; gap: 0; }
+    .form-group.half { flex: 1; }
+    .info-strip { flex-direction: column; }
+    .footer-inner { grid-template-columns: 1fr; gap: 1.75rem; }
+  }
+</style>
+</head>
+<body>
+<!-- ════ SHARED NAV ════ -->
+<header class="site-nav" id="siteNav">
+  <div class="nav-strip"><span class="s-green"></span><span class="s-orange"></span><span class="s-purple"></span><span class="s-yellow"></span></div>
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">Tucker<span>Casuarina</span></a>
+    <button class="nav-toggle" aria-label="Toggle menu" onclick="document.getElementById('siteNav').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="gift-vouchers.html">Gift Vouchers</a>
+      <a href="bookings.html" class="active">Group Bookings</a>
+      <a href="https://www.meandu.app/tucker/pickup" class="nav-order">Order Pickup</a>
+    </nav>
+  </div>
+</header>
+<div class="booking-wrap">
+  <!-- HEADER -->
+  <div class="page-header">
+    <div class="page-title">Group Bookings</div>
+    <p class="page-desc">Planning something special? We'd love to host your group. Fill in the details below and we'll be in touch within 48 hours to confirm.</p>
+  </div>
+  <!-- INFO STRIP -->
+  <div class="info-strip">
+    <div class="info-block">
+      <div class="info-label">Min group size</div>
+      <div class="info-value">8+ guests</div>
+    </div>
+    <div class="info-block">
+      <div class="info-label">Max capacity</div>
+      <div class="info-value">40 guests</div>
+    </div>
+    <div class="info-block">
+      <div class="info-label">Response time</div>
+      <div class="info-value">Within 48 hrs</div>
+    </div>
+  </div>
+  <!-- FORM -->
+  <form id="bookingForm" novalidate>
+    <!-- YOUR DETAILS -->
+    <div class="form-section">
+      <div class="form-section-title">Your details</div>
+      <div class="form-row">
+        <div class="form-group half">
+          <label>First name <span class="req">*</span></label>
+          <input type="text" id="firstName" placeholder="Phil" required>
+          <div class="field-error" id="err-firstName">Please enter your first name</div>
+        </div>
+        <div class="form-group half">
+          <label>Last name <span class="req">*</span></label>
+          <input type="text" id="lastName" placeholder="Smith">
+          <div class="field-error" id="err-lastName">Please enter your last name</div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group half">
+          <label>Email <span class="req">*</span></label>
+          <input type="email" id="email" placeholder="phil@email.com" required>
+          <div class="field-error" id="err-email">Please enter a valid email</div>
+        </div>
+        <div class="form-group half">
+          <label>Phone <span class="req">*</span></label>
+          <input type="tel" id="phone" placeholder="0400 000 000" required>
+          <div class="field-error" id="err-phone">Please enter your phone number</div>
+        </div>
+      </div>
+    </div>
+    <!-- BOOKING DETAILS -->
+    <div class="form-section">
+      <div class="form-section-title">Booking details</div>
+      <div class="form-row">
+        <div class="form-group half">
+          <label>Preferred date <span class="req">*</span></label>
+          <input type="date" id="date" required>
+          <div class="field-error" id="err-date">Please select a date</div>
+        </div>
+        <div class="form-group half">
+          <label>Arrival time <span class="req">*</span></label>
+          <select id="time" required>
+            <option value="">Select a time</option>
+            <option>7:00 am</option>
+            <option>7:30 am</option>
+            <option>8:00 am</option>
+            <option>8:30 am</option>
+            <option>9:00 am</option>
+            <option>9:30 am</option>
+            <option>10:00 am</option>
+            <option>10:30 am</option>
+            <option>11:00 am</option>
+            <option>11:30 am</option>
+            <option>12:00 pm</option>
+            <option>12:30 pm</option>
+            <option>1:00 pm</option>
+          </select>
+          <div class="field-error" id="err-time">Please select a time</div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group half">
+          <label>Number of guests <span class="req">*</span></label>
+          <input type="number" id="guests" min="8" max="40" placeholder="e.g. 12" required>
+          <div class="field-error" id="err-guests">Please enter a group size (min 8, max 40)</div>
+        </div>
+        <div class="form-group half">
+          <label>Seating preference</label>
+          <select id="seating">
+            <option value="">No preference</option>
+            <option>Indoors</option>
+            <option>Outdoors / courtyard</option>
+            <option>Mix of both</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <!-- DIETARY -->
+    <div class="form-section">
+      <div class="form-section-title">Dietary requirements</div>
+      <div class="form-group">
+        <label style="text-transform:none;letter-spacing:0;font-size:11.5px;font-weight:400;color:var(--muted);margin-bottom:0.6rem;">Select all that apply in your group</label>
+        <div class="check-grid">
+          <label class="check-pill"><input type="checkbox" value="Vegetarian"> Vegetarian</label>
+          <label class="check-pill"><input type="checkbox" value="Vegan"> Vegan</label>
+          <label class="check-pill"><input type="checkbox" value="Gluten free"> Gluten free</label>
+          <label class="check-pill"><input type="checkbox" value="Dairy free"> Dairy free</label>
+          <label class="check-pill"><input type="checkbox" value="Nut allergy"> Nut allergy</label>
+        </div>
+      </div>
+    </div>
+    <!-- EXTRA NOTES -->
+    <div class="form-section">
+      <div class="form-section-title">Anything else?</div>
+      <div class="form-group">
+        <label>Occasion or special requests</label>
+        <textarea id="notes" placeholder="Birthday, work catch-up, dietary notes, anything we should know…"></textarea>
+      </div>
+    </div>
+    <!-- ACCESSIBILITY & HIGH CHAIRS -->
+    <div class="form-section">
+      <div class="form-section-title">Accessibility &amp; families</div>
+      <div class="form-row">
+        <div class="form-group half">
+          <label>High chairs needed</label>
+          <select id="highchairs">
+            <option value="0">None</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5+">5 or more</option>
+          </select>
+        </div>
+        <div class="form-group half">
+          <label>Wheelchair / accessibility access</label>
+          <select id="accessibility">
+            <option value="No">Not required</option>
+            <option value="Yes">Yes — required</option>
+            <option value="Unsure">Unsure — please advise</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <!-- SUBMIT -->
+    <div class="submit-wrap">
+      <button type="submit" class="submit-btn" id="submitBtn">Send Booking Enquiry</button>
+      <p class="submit-note">We'll confirm your booking within 48 hours.</p>
+    </div>
+  </form>
+  <!-- SUCCESS SCREEN -->
+  <div class="success-screen" id="successScreen">
+    <div class="success-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#7a9f7e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12"/>
+      </svg>
+    </div>
+    <div class="success-title">Enquiry Received</div>
+    <p class="success-msg">Thanks <span id="successName"></span> — we've got your booking enquiry and will be in touch within 48 hours to confirm everything.</p>
+    <div class="success-detail" id="successDetail"></div>
+  </div>
+</div>
+<!-- ════ SHARED FOOTER ════ -->
+<footer class="site-footer">
+  <div class="footer-strip"><span class="s-green"></span><span class="s-orange"></span><span class="s-purple"></span><span class="s-yellow"></span></div>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <div class="footer-logo">Tucker</div>
+      <p>Coffee, brunch &amp; good vibes at The Commons.<br>T1/480 Casuarina Way,<br>Casuarina NSW 2487</p>
+      <p style="margin-top:0.75rem;"><a href="mailto:gday@tuckercasuarina.com" style="display:inline;color:var(--butter);">gday@tuckercasuarina.com</a></p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="https://www.meandu.app/tucker/pickup">Order Pickup</a>
+      <a href="gift-vouchers.html">Gift Vouchers</a>
+    </div>
+    <div class="footer-col">
+      <h4>Hours</h4>
+      <p>Mon–Fri · Coffee 6am–2pm<br>Food 7am–1:30pm</p>
+      <p>Sat–Sun · Coffee 7am–2pm<br>Food 7am–1:30pm</p>
+      <a href="https://www.instagram.com/tucker.casuarina/" target="_blank" rel="noopener" style="margin-top:0.75rem;color:var(--butter);">@tucker.casuarina →</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 <span>Tucker Casuarina</span>. All rights reserved. · Proudly serving Loma Coffee</div>
+</footer>
+<script>
+  // ── Set min date to today ──
+  const dateInput = document.getElementById('date');
+  const today = new Date().toISOString().split('T')[0];
+  dateInput.setAttribute('min', today);
+  // ── Get dietary selections ──
+  function getDietary() {
+    return [...document.querySelectorAll('.check-pill input:checked')]
+      .map(cb => cb.value).join(', ') || 'None specified';
+  }
+  // ── Validate ──
+  function validate() {
+    const fields = [
+      { id: 'firstName', check: v => v.trim().length > 0 },
+      { id: 'lastName',  check: v => v.trim().length > 0 },
+      { id: 'email',     check: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) },
+      { id: 'phone',     check: v => v.trim().length > 7 },
+      { id: 'date',      check: v => v.length > 0 },
+      { id: 'time',      check: v => v.length > 0 },
+      { id: 'guests',    check: v => v !== '' && parseInt(v) >= 8 && parseInt(v) <= 40 },
+    ];
+    let valid = true;
+    fields.forEach(({ id, check }) => {
+      const el = document.getElementById(id);
+      const err = document.getElementById('err-' + id);
+      const ok = check(el.value);
+      el.classList.toggle('error', !ok);
+      if (err) err.classList.toggle('show', !ok);
+      if (!ok) valid = false;
+    });
+    return valid;
+  }
+  // ── Submit ──
+  document.getElementById('bookingForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    if (!validate()) return;
+    const btn = document.getElementById('submitBtn');
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+    // Collect data
+    const data = {
+      firstName:  document.getElementById('firstName').value.trim(),
+      lastName:   document.getElementById('lastName').value.trim(),
+      email:      document.getElementById('email').value.trim(),
+      phone:      document.getElementById('phone').value.trim(),
+      date:       document.getElementById('date').value,
+      time:       document.getElementById('time').value,
+      guests:     document.getElementById('guests').value,
+      seating:       document.getElementById('seating').value || 'No preference',
+      highchairs:    document.getElementById('highchairs').value,
+      accessibility: document.getElementById('accessibility').value,
+      dietary:       getDietary(),
+      notes:         document.getElementById('notes').value.trim() || 'None',
+    };
+    // Format date nicely
+    const dateFormatted = new Date(data.date + 'T12:00:00')
+      .toLocaleDateString('en-AU', { weekday:'long', day:'numeric', month:'long', year:'numeric' });
+    // ── Send to Formspree ──
+    // TODO: replace the endpoint below with Tucker's own Formspree (or chosen) form ID before launch.
+    try {
+      const res = await fetch('https://formspree.io/f/mvzwdney', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          _subject: `Group Booking Enquiry — ${data.firstName} ${data.lastName} · ${dateFormatted} · ${data.guests} guests`,
+          ...data,
+          date: dateFormatted,
+        })
+      });
+      if (res.ok) {
+        showSuccess(data, dateFormatted);
+      } else {
+        throw new Error('Form error');
+      }
+    } catch {
+      // Fallback: mailto if Formspree not set up yet
+      const body = `Group Booking Enquiry
+Name: ${data.firstName} ${data.lastName}
+Email: ${data.email}
+Phone: ${data.phone}
+Date: ${dateFormatted}
+Time: ${data.time}
+Guests: ${data.guests}
+Seating: ${data.seating}
+High chairs: ${data.highchairs}
+Accessibility: ${data.accessibility}
+Dietary: ${data.dietary}
+Notes: ${data.notes}`;
+      window.location.href = `mailto:gday@tuckercasuarina.com?subject=Group Booking Enquiry — ${data.firstName} ${data.lastName}&body=${encodeURIComponent(body)}`;
+      showSuccess(data, dateFormatted);
+    }
+  });
+  function showSuccess(data, dateFormatted) {
+    document.getElementById('bookingForm').style.display = 'none';
+    const screen = document.getElementById('successScreen');
+    screen.style.display = 'block';
+    document.getElementById('successName').textContent = data.firstName;
+    document.getElementById('successDetail').innerHTML = `
+      <strong>Date</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${dateFormatted}<br>
+      <strong>Time</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${data.time}<br>
+      <strong>Guests</strong> &nbsp;&nbsp;&nbsp;&nbsp;${data.guests}<br>
+      <strong>High chairs</strong> &nbsp;${data.highchairs}<br>
+      <strong>Access needs</strong> &nbsp;${data.accessibility}<br>
+      <strong>Dietary</strong> &nbsp;&nbsp;&nbsp;${data.dietary}
+    `;
+    screen.scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>

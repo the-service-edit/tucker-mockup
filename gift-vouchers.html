@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gift Vouchers — Tucker Casuarina</title>
+<meta name="description" content="Give the gift of good tucker. Treat someone to coffee, brunch or lunch at Tucker Casuarina. Delivered instantly, valid for 3 years.">
+<link rel="canonical" href="https://www.tuckercasuarina.com/gift-vouchers">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tucker Casuarina">
+<meta property="og:title" content="Gift Vouchers — Tucker Casuarina">
+<meta property="og:description" content="Give the gift of good tucker. Delivered instantly, valid for 3 years.">
+<meta property="og:url" content="https://www.tuckercasuarina.com/gift-vouchers">
+<meta property="og:image" content="https://images.squarespace-cdn.com/content/5a1df19229f187706a8cda42/3c2e7c37-98ba-4de8-b258-d17fee216d4a/tucker-inside.png?content-type=image%2Fpng">
+<link rel="icon" href="https://images.squarespace-cdn.com/content/v1/5a1df19229f187706a8cda42/98f688c2-15f4-461e-ac8e-ea740c6b4b58/new+logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sage:       #7a9f7e;
+    --sage-mid:   #5d8561;
+    --sage-pale:  #edf4ee;
+    --sage-dark:  #3a5c3d;
+    --terra:      #e6855a;
+    --terra-pale: #fdf0ea;
+    --lilac:      #bc9dbe;
+    --butter:     #e9e0a5;
+    --butter-pale:#faf8ec;
+    --ink:        #1a1a1a;
+    --mid:        #4a443d;
+    --muted:      #7a7468;
+    --light:      #bbb;
+    --rule:       #e8e4de;
+    --bg:         #fdfcf8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 300;
+  }
+  /* ── SHARED SITE NAV ── */
+  .site-nav { position: sticky; top: 0; z-index: 200; background: #fff; border-bottom: 1px solid rgba(0,0,0,0.08); }
+  .nav-strip { height: 4px; display: flex; }
+  .nav-strip span { flex: 1; }
+  .s-green { background: #7a9f7e; } .s-orange { background: #e6855a; } .s-purple { background: #bc9dbe; } .s-yellow { background: #e9e0a5; }
+  .nav-container { max-width: 1200px; margin: 0 auto; padding: 0.85rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { text-decoration: none; font-weight: 900; font-size: 1.35rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sage); line-height: 1; display: flex; flex-direction: column; }
+  .nav-logo span { font-size: 8px; letter-spacing: 0.3em; color: rgba(0,0,0,0.45); font-weight: 700; margin-top: 3px; }
+  .nav-links { display: flex; align-items: center; gap: 1.75rem; }
+  .nav-links a { text-decoration: none; font-size: 11px; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ink); transition: color 0.15s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--sage); }
+  .nav-links a.nav-order { background: var(--terra); color: #fff; padding: 0.65rem 1.4rem; border-radius: 3px; }
+  .nav-links a.nav-order:hover { opacity: 0.88; color: #fff; }
+  .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
+  .nav-toggle span { width: 24px; height: 2px; background: var(--ink); display: block; }
+  @media (max-width: 820px) {
+    .nav-toggle { display: flex; }
+    .nav-links { position: absolute; top: 100%; left: 0; right: 0; background: #fff; flex-direction: column; align-items: stretch; gap: 0; padding: 0.5rem 0; border-bottom: 1px solid rgba(0,0,0,0.08); box-shadow: 0 12px 24px rgba(0,0,0,0.06); display: none; }
+    .site-nav.open .nav-links { display: flex; }
+    .nav-links a { padding: 0.9rem 2rem; border-top: 1px solid rgba(0,0,0,0.05); }
+    .nav-links a.nav-order { margin: 0.5rem 2rem; text-align: center; }
+  }
+  /* ── HERO ── */
+  .hero {
+    background: var(--sage);
+    padding: 4rem 2rem 3.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 50%, rgba(233,224,165,0.2) 0%, transparent 55%),
+      radial-gradient(ellipse at 85% 20%, rgba(188,157,190,0.15) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .hero-eyebrow {
+    font-size: 9px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  .hero-title {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 1.05;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  .hero-title span { color: var(--butter); }
+  .hero-desc {
+    font-size: 14px;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.8;
+    max-width: 440px;
+    margin: 0 auto 2.5rem;
+    font-weight: 300;
+    position: relative;
+  }
+  .voucher-preview { max-width: 380px; margin: 0 auto 2.5rem; position: relative; }
+  .voucher-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.18), 0 4px 16px rgba(0,0,0,0.08);
+    transform: rotate(-1.5deg);
+    transition: transform 0.3s ease;
+  }
+  .voucher-card:hover { transform: rotate(0deg) scale(1.02); }
+  .voucher-top {
+    background: var(--sage-dark);
+    padding: 1.5rem 1.75rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .voucher-brand {
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .voucher-name {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  .voucher-amount-badge {
+    background: var(--butter);
+    color: var(--sage-dark);
+    font-size: 1.1rem;
+    font-weight: 800;
+    padding: 8px 16px;
+    border-radius: 8px;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  .voucher-stripe { height: 6px; display: flex; }
+  .voucher-stripe span { flex: 1; }
+  .voucher-bottom { padding: 1.25rem 1.75rem 1.5rem; background: #fff; }
+  .voucher-tagline {
+    font-size: 13px;
+    color: var(--muted);
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+  }
+  .voucher-meta {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--light);
+    font-weight: 600;
+  }
+  .hero-cta {
+    display: inline-block;
+    background: var(--terra);
+    color: #fff;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 1rem 2.5rem;
+    border-radius: 3px;
+    transition: background 0.18s, transform 0.1s;
+    position: relative;
+  }
+  .hero-cta:hover { background: #d4733f; transform: translateY(-1px); }
+  .hero-cta:active { transform: scale(0.98); }
+  .section-label {
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  .section-title {
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 0.75rem;
+  }
+  /* ── WHY VOUCHERS ── */
+  .why-section { background: var(--sage-pale); padding: 3rem 2rem; }
+  .why-inner { max-width: 680px; margin: 0 auto; text-align: center; }
+  .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem; }
+  .why-item {
+    padding: 1.75rem 1rem;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid rgba(122,159,126,0.2);
+  }
+  .why-icon { display: flex; justify-content: center; margin-bottom: 0.8rem; }
+  .why-icon svg { width: 30px; height: 30px; stroke: var(--sage); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .why-title {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--sage-dark);
+    margin-bottom: 0.4rem;
+  }
+  .why-desc { font-size: 12px; color: var(--muted); line-height: 1.6; font-weight: 300; }
+  /* ── OCCASIONS ── */
+  .occasions-section { max-width: 680px; margin: 0 auto; padding: 3rem 2rem; text-align: center; }
+  .occasions-grid { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-top: 1.5rem; }
+  .occasion-tag {
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: 1px solid var(--rule);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--mid);
+    background: white;
+  }
+  /* ── FINAL CTA ── */
+  .final-cta {
+    background: var(--lilac);
+    padding: 3.5rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .final-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 100%, rgba(255,255,255,0.15) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .final-cta-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 0.6rem;
+    position: relative;
+  }
+  .final-cta-desc {
+    font-size: 13px;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 2rem;
+    position: relative;
+    line-height: 1.7;
+  }
+  .final-cta-btn {
+    display: inline-block;
+    background: white;
+    color: var(--lilac);
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    border-radius: 3px;
+    transition: background 0.18s;
+    position: relative;
+  }
+  .final-cta-btn:hover { background: rgba(255,255,255,0.88); }
+  /* ── SHARED FOOTER ── */
+  .site-footer { background: #1a1a1a; color: rgba(255,255,255,0.7); }
+  .footer-strip { height: 6px; display: flex; }
+  .footer-strip span { flex: 1; }
+  .footer-inner { max-width: 1100px; margin: 0 auto; padding: 3.5rem 2rem 2.5rem; display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 2.5rem; }
+  .footer-col h4 { font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(255,255,255,0.4); font-weight: 800; margin-bottom: 1rem; }
+  .footer-logo { font-size: 1.5rem; font-weight: 900; letter-spacing: 0.12em; text-transform: uppercase; color: #fff; margin-bottom: 0.75rem; }
+  .footer-col p, .footer-col a { font-size: 13px; line-height: 1.9; color: rgba(255,255,255,0.7); text-decoration: none; font-weight: 300; }
+  .footer-col a { display: block; }
+  .footer-col a:hover { color: var(--butter); }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding: 1.25rem 2rem; text-align: center; font-size: 11px; color: rgba(255,255,255,0.4); }
+  .footer-bottom span { color: var(--sage); }
+  @media (max-width: 600px) {
+    .why-grid { grid-template-columns: 1fr; }
+    .hero { padding: 3rem 1.25rem 2.5rem; }
+    .occasions-section { padding: 2.5rem 1.25rem; }
+    .footer-inner { grid-template-columns: 1fr; gap: 1.75rem; }
+  }
+</style>
+</head>
+<body>
+<!-- ════ SHARED NAV ════ -->
+<header class="site-nav" id="siteNav">
+  <div class="nav-strip"><span class="s-green"></span><span class="s-orange"></span><span class="s-purple"></span><span class="s-yellow"></span></div>
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">Tucker<span>Casuarina</span></a>
+    <button class="nav-toggle" aria-label="Toggle menu" onclick="document.getElementById('siteNav').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="gift-vouchers.html" class="active">Gift Vouchers</a>
+      <a href="bookings.html">Group Bookings</a>
+      <a href="https://www.meandu.app/tucker/pickup" class="nav-order">Order Pickup</a>
+    </nav>
+  </div>
+</header>
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">Tucker Casuarina</div>
+  <div class="hero-title">Give the gift of<br><span>good tucker</span></div>
+  <p class="hero-desc">Treat someone to breakfast, brunch or lunch at Tucker Casuarina. A gift voucher for the people who have everything — except plans for Sunday morning.</p>
+  <div class="voucher-preview">
+    <div class="voucher-card">
+      <div class="voucher-top">
+        <div>
+          <div class="voucher-brand">Gift Voucher</div>
+          <div class="voucher-name">Tucker</div>
+        </div>
+        <div class="voucher-amount-badge">$50</div>
+      </div>
+      <div class="voucher-stripe">
+        <span style="background:#7a9f7e"></span>
+        <span style="background:#e6855a"></span>
+        <span style="background:#bc9dbe"></span>
+        <span style="background:#e9e0a5"></span>
+      </div>
+      <div class="voucher-bottom">
+        <div class="voucher-tagline">Coffee, brunch &amp; good vibes at The Commons, Casuarina NSW</div>
+        <div class="voucher-meta">Valid 3 years · No expiry stress</div>
+      </div>
+    </div>
+  </div>
+  <!-- TODO: confirm voucher provider URL. Placeholder = Gift-it. Swap href below once confirmed. -->
+  <a href="https://app.gift-it.com.au/buy/tucker" class="hero-cta" target="_blank" rel="noopener">Purchase a Voucher →</a>
+</div>
+<!-- WHY -->
+<div class="why-section">
+  <div class="why-inner">
+    <div class="section-label">Why Tucker Vouchers</div>
+    <div class="section-title">The gift that never misses</div>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <div class="why-title">Delivered instantly</div>
+        <div class="why-desc">Sent straight to their inbox the moment you purchase. Perfect for last-minute gifting.</div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+        </div>
+        <div class="why-title">Use on anything</div>
+        <div class="why-desc">Valid across the full menu — coffee, brunch, lunch, smoothies, the works.</div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        </div>
+        <div class="why-title">3 year validity</div>
+        <div class="why-desc">No pressure. They've got three years to choose their perfect morning.</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- OCCASIONS -->
+<div class="occasions-section">
+  <div class="section-label">Perfect for</div>
+  <div class="section-title">Any reason to celebrate</div>
+  <div class="occasions-grid">
+    <span class="occasion-tag">Birthdays</span>
+    <span class="occasion-tag">Mother's Day</span>
+    <span class="occasion-tag">Father's Day</span>
+    <span class="occasion-tag">Christmas</span>
+    <span class="occasion-tag">Thank you</span>
+    <span class="occasion-tag">New baby</span>
+    <span class="occasion-tag">Work milestones</span>
+    <span class="occasion-tag">Just because</span>
+  </div>
+</div>
+<!-- FINAL CTA -->
+<div class="final-cta">
+  <div class="final-cta-title">Ready to treat someone?</div>
+  <p class="final-cta-desc">Takes less than two minutes.<br>Delivered straight to their inbox.</p>
+  <!-- TODO: confirm voucher provider URL (placeholder = Gift-it). -->
+  <a href="https://app.gift-it.com.au/buy/tucker" class="final-cta-btn" target="_blank" rel="noopener">Purchase a Gift Voucher →</a>
+</div>
+<!-- ════ SHARED FOOTER ════ -->
+<footer class="site-footer">
+  <div class="footer-strip"><span class="s-green"></span><span class="s-orange"></span><span class="s-purple"></span><span class="s-yellow"></span></div>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <div class="footer-logo">Tucker</div>
+      <p>Coffee, brunch &amp; good vibes at The Commons.<br>T1/480 Casuarina Way,<br>Casuarina NSW 2487</p>
+      <p style="margin-top:0.75rem;"><a href="mailto:gday@tuckercasuarina.com" style="display:inline;color:var(--butter);">gday@tuckercasuarina.com</a></p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="https://www.meandu.app/tucker/pickup">Order Pickup</a>
+      <a href="bookings.html">Group Bookings</a>
+    </div>
+    <div class="footer-col">
+      <h4>Hours</h4>
+      <p>Mon–Fri · Coffee 6am–2pm<br>Food 7am–1:30pm</p>
+      <p>Sat–Sun · Coffee 7am–2pm<br>Food 7am–1:30pm</p>
+      <a href="https://www.instagram.com/tucker.casuarina/" target="_blank" rel="noopener" style="margin-top:0.75rem;color:var(--butter);">@tucker.casuarina →</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 <span>Tucker Casuarina</span>. All rights reserved. · Proudly serving Loma Coffee</div>
+</footer>
+</body>
+</html>
