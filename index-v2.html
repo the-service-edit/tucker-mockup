@@ -13,7 +13,7 @@
 <meta property="og:url" content="https://www.tuckercasuarina.com/">
 <meta property="og:image" content="https://images.squarespace-cdn.com/content/v1/5a1df19229f187706a8cda42/ce9bc54a-8c83-4dce-8e4c-7162d251cd32/250105_tucker+17.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="https://images.squarespace-cdn.com/content/v1/5a1df19229f187706a8cda42/98f688c2-15f4-461e-ac8e-ea740c6b4b58/new+logo.png">
+<link rel="icon" href="tucker-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
@@ -44,8 +44,8 @@
   .nav-strip span { flex: 1; }
   .s-green { background: var(--green); } .s-orange { background: var(--orange); } .s-purple { background: var(--purple); } .s-yellow { background: var(--yellow); }
   .nav-container { max-width: 1200px; margin: 0 auto; padding: 0.7rem 1.5rem; display: flex; align-items: center; justify-content: space-between; }
-  .nav-logo { text-decoration: none; font-size: 1.7rem; color: var(--white); line-height: 1; letter-spacing: 0.02em; }
-  .nav-logo span { color: var(--orange); }
+  .nav-logo { text-decoration: none; display: flex; align-items: center; }
+  .nav-logo img { height: 30px; width: auto; display: block; }
   .nav-links { display: flex; align-items: center; gap: 1.4rem; }
   .nav-links a { text-decoration: none; font-size: 11px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.85); transition: color 0.15s; }
   .nav-links a:hover, .nav-links a.active { color: var(--yellow); }
@@ -163,13 +163,14 @@
   .fi-link { display: inline-block; margin-top: 1rem; font-size: 11px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: var(--white); text-decoration: none; border-bottom: 2px solid var(--yellow); padding-bottom: 3px; }
   @media (min-width: 800px) { .find { grid-template-columns: 1fr 1fr; } .find-info { padding: 4rem 3rem; } }
 
-  /* ── FOOTER (deep green) ── */
-  .site-footer { background: var(--green-d); color: rgba(255,255,255,0.78); }
+  /* ── FOOTER (warm espresso — bookends the nav) ── */
+  .site-footer { background: var(--espresso); color: rgba(255,255,255,0.78); }
   .footer-strip { height: 6px; display: flex; }
   .footer-strip span { flex: 1; }
   .footer-inner { max-width: 1100px; margin: 0 auto; padding: 3.25rem 1.5rem 2.5rem; display: grid; grid-template-columns: 1fr; gap: 1.75rem; }
   .footer-col h4 { font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(255,255,255,0.5); font-weight: 800; margin-bottom: 1rem; }
-  .footer-logo { font-family: 'Anton', sans-serif; font-size: 1.7rem; color: var(--white); margin-bottom: 0.75rem; }
+  .footer-logo { margin-bottom: 1rem; }
+  .footer-logo img { height: 40px; width: auto; display: block; opacity: 0.95; }
   .footer-col p, .footer-col a { font-size: 13px; line-height: 1.9; color: rgba(255,255,255,0.78); text-decoration: none; font-weight: 300; }
   .footer-col a { display: block; }
   .footer-col a:hover { color: var(--yellow); }
@@ -183,7 +184,7 @@
 <header class="site-nav" id="siteNav">
   <div class="nav-strip"><span class="s-green"></span><span class="s-orange"></span><span class="s-purple"></span><span class="s-yellow"></span></div>
   <div class="nav-container">
-    <a href="index-v2.html" class="nav-logo display">Tuck<span>er</span></a>
+    <a href="index-v2.html" class="nav-logo"><img src="tucker-logo.png" alt="Tucker Casuarina"></a>
     <button class="nav-toggle" aria-label="Toggle menu" onclick="document.getElementById('siteNav').classList.toggle('open')">
       <span></span><span></span><span></span>
     </button>
@@ -335,7 +336,7 @@
   <div class="footer-strip"><span class="s-green"></span><span class="s-orange"></span><span class="s-purple"></span><span class="s-yellow"></span></div>
   <div class="footer-inner">
     <div class="footer-col">
-      <div class="footer-logo">Tucker</div>
+      <div class="footer-logo"><img src="tucker-logo.png" alt="Tucker Casuarina"></div>
       <p>The Commons, T1/480 Casuarina Way,<br>Casuarina NSW 2487</p>
       <p style="margin-top:0.75rem;"><a href="mailto:gday@tuckercasuarina.com" style="display:inline;color:var(--yellow);">gday@tuckercasuarina.com</a></p>
     </div>
